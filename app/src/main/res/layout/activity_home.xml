@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#2BB673"
+    android:padding="16dp"
+    tools:context=".HomeActivity">
+
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#2BB673"
+        android:layout_alignParentTop="true"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp">
+
+        <ImageView
+            android:id="@+id/logoIcon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/taisma_logo"
+            android:layout_gravity="center"
+            />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <!-- Botón de cerrar sesión -->
+        <TextView
+            android:id="@+id/logoutText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cerrar Sesión"
+            android:textSize="14sp"
+            android:fontFamily="@font/open_sans_regular"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="end"
+            android:layout_weight="0" />
+    </LinearLayout>
+
+    <!-- Vista para la línea horizontal central -->
+    <View
+        android:layout_width="500dp"
+        android:layout_height="1dp"
+        android:layout_centerInParent="true"
+        android:background="#FFFFFF" />
+
+    <!-- Vista para la línea vertical central -->
+    <View
+        android:layout_width="1dp"
+        android:layout_height="500dp"
+        android:layout_centerInParent="true"
+        android:background="#FFFFFF" />
+
+    <!-- GridLayout para las secciones -->
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="22dp"
+        android:columnCount="2"
+        android:rowCount="2"
+        >
+
+
+        <!-- Sección Clientes -->
+        <LinearLayout
+            android:layout_marginTop="40dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:id="@+id/sectionCustomer">
+
+            <ImageView
+                android:layout_width="84dp"
+                android:layout_height="84dp"
+                android:src="@drawable/client_icon" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Clientes"
+                android:fontFamily="@font/open_sans_semi_bold"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="10dp"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <!-- Sección Resumen Diario-->
+        <LinearLayout
+            android:layout_marginTop="40dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:id="@+id/sectionSummary">
+
+            <ImageView
+                android:layout_width="84dp"
+                android:layout_height="84dp"
+                android:src="@drawable/summary_icon" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Resumen"
+                android:fontFamily="@font/open_sans_semi_bold"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="10dp"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <!-- Sección Ruta -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginBottom="40dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:id="@+id/sectionRoute">
+
+            <ImageView
+                android:layout_width="84dp"
+                android:layout_height="84dp"
+                android:src="@drawable/route_icon"
+            />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ruta"
+                android:fontFamily="@font/open_sans_semi_bold"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="10dp"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <!-- Sección Herramientas -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="40dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:id="@+id/sectionTools">
+
+            <ImageView
+                android:layout_width="84dp"
+                android:layout_height="84dp"
+                android:src="@drawable/tools_icon"
+            />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Herramientas"
+                android:fontFamily="@font/open_sans_semi_bold"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="10dp"
+                android:textSize="18sp"
+                />
+
+
+
+        </LinearLayout>
+    </GridLayout>
+
+</RelativeLayout>

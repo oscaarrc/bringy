@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "118656247458",
+    "project_id": "taima-311224",
+    "storage_bucket": "taima-311224.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:118656247458:android:63b8b02cc80f5ead1299fb",
+        "android_client_info": {
+          "package_name": "com.project.taima"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFm_BHBpHtXmGl-yToZI1_PhJR4ypdK4Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

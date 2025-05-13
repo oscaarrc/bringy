@@ -1,0 +1,162 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2BB673"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/backIconSummary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_icon"
+            android:contentDescription="Back Icon"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Resumen"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:layout_marginStart="16dp"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <!--Customer charged-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom|start"
+        android:layout_marginTop="9dp"
+        android:layout_marginStart="7dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginStart="4dp"
+            android:src="@drawable/circle_green_icon"
+            />
+        <TextView
+            android:id="@+id/chargedText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Total cobrado: 0.00"
+            android:textSize="16sp"
+            android:textColor="#000000" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+        <Button
+            android:id="@+id/dailySummaryBtn"
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:text="Resumen diario"
+            android:textSize="14sp"
+            android:textAllCaps="false"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="@color/green"
+            android:background="@drawable/client_border"
+            android:textColor="@android:color/white"
+            android:paddingStart="12dp"
+            android:drawableEnd="@drawable/expand_arrow"
+            android:paddingEnd="6dp" />
+    </LinearLayout>
+
+    <!--Customer charged-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom|start"
+        android:layout_marginTop="9dp"
+        android:layout_marginStart="7dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginStart="4dp"
+            android:src="@drawable/circle_red_icon"
+            />
+        <TextView
+            android:id="@+id/depositText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Total fiado: 0.00"
+            android:textSize="16sp"
+            android:textColor="#000000" />
+
+    </LinearLayout>
+
+
+    <!-- List of charged and deposit -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Operaciones:"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:layout_marginBottom="8dp" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- ListView -->
+            <ListView
+                android:id="@+id/transactionsListSummary"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:dividerHeight="1dp"
+                android:visibility="gone" />
+
+            <!-- Mensaje centrado -->
+            <TextView
+                android:id="@+id/noTransactionsMessageSummary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Aún no existen transacciones"
+                android:fontFamily="@font/open_sans_semi_bold_italic"
+                android:textSize="20sp"
+                android:textColor="#888888"
+                android:visibility="visible" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <!-- Load more transactions -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/loadMoreButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:layout_margin="16dp"
+        android:importantForAccessibility="no"
+        android:src="@drawable/add_icon"
+        android:scaleType="centerInside"
+        app:maxImageSize="30dp"
+        app:backgroundTint="@color/green"
+        tools:ignore="ContentDescription" />
+</LinearLayout>

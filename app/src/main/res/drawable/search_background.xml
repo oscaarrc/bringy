@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Color de fondo del campo de búsqueda -->
+    <solid android:color="#FFFFFF" />
+
+    <!-- Borde redondeado -->
+    <corners android:radius="16dp" />
+
+    <!-- Borde con un color gris claro -->
+    <stroke
+        android:width="1dp"
+        android:color="#DDDDDD" />
+
+    <!-- Margen interno para que el texto no toque los bordes -->
+    <padding
+        android:left="8dp"
+        android:top="8dp"
+        android:right="8dp"
+        android:bottom="8dp" />
+</shape>

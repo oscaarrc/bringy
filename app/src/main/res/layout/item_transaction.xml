@@ -1,0 +1,99 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:layout_marginTop="4dp">
+
+    <!-- Transaction type and date -->
+    <TextView
+        android:id="@+id/transactionTypeAndDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:padding="2dp"
+        />
+
+    <!-- Divider line -->
+    <View
+        android:layout_width="300dp"
+        android:layout_height="1dp"
+        android:background="#000000"
+        android:layout_marginVertical="4dp" />
+
+    <!-- Amount -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:padding="2dp">
+
+        <ImageView
+            android:id="@+id/arrowImg"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/green_arrow_icon"
+            android:layout_gravity="center_vertical" />
+
+        <TextView
+            android:id="@+id/transactionAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:gravity="end"
+            android:layout_marginStart="8dp"
+            android:layout_gravity="center_vertical" />
+    </LinearLayout>
+
+    <!-- Action buttons -->
+    <LinearLayout
+        android:id="@+id/circleActionButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:visibility="gone"
+        android:layout_marginTop="8dp">
+
+        <!-- Edit button -->
+        <LinearLayout
+            android:id="@+id/btnEditCircle"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:orientation="horizontal"
+            android:background="@drawable/circle_background"
+            android:backgroundTint="#F49514"
+            android:layout_margin="4dp"
+            android:padding="8dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:src="@drawable/edit_icon"
+                app:tint="#FFFFFF" />
+        </LinearLayout>
+
+        <!-- Delete button -->
+        <LinearLayout
+            android:id="@+id/btnDeleteCircle"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:orientation="horizontal"
+            android:background="@drawable/circle_background"
+            android:backgroundTint="@color/red"
+            android:layout_margin="4dp"
+            android:padding="8dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:src="@drawable/delete_icon"
+                app:tint="#FFFFFF" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

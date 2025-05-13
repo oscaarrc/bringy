@@ -1,0 +1,190 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/cancelIcon"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/cancel_icon"
+            android:contentDescription="Menú hamburguesa"
+
+            />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+            <TextView
+                android:text="Nuevo Cliente"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:fontFamily="@font/open_sans_regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="8dp" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/routeText"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/open_sans_regular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Dirección"
+        android:maxLength="60"
+        android:minHeight="48dp" />
+
+    <EditText
+        android:id="@+id/aliasText"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/open_sans_regular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Alias (opcional)"
+        android:minHeight="48dp" />
+
+    <EditText
+        android:id="@+id/balanceText"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/open_sans_regular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Saldo (opcional)"
+        android:inputType="numberSigned|numberDecimal"
+        android:minHeight="48dp" />
+
+
+    <!-- Botones para seleccionar días de la semana -->
+    <TextView
+        android:text="Selecciona los días de reparto:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/open_sans_regular"
+        android:layout_marginTop="30dp" />
+
+    <GridLayout
+        android:id="@+id/daysGrid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:columnCount="3"
+        android:orientation="horizontal">
+
+        <!-- Botón Lunes -->
+        <Button
+            android:id="@+id/btnMonday"
+            android:text="Lunes"
+            android:background="@drawable/days_border"
+            android:textColor="@color/white"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="4dp"/>
+
+        <!-- Botón Martes -->
+        <Button
+            android:id="@+id/btnTuesday"
+            android:background="@drawable/days_border"
+            android:textColor="@color/white"
+            android:text="Martes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="4dp"/>
+
+        <!-- Botón Miércoles -->
+        <Button
+            android:id="@+id/btnWednesday"
+            android:background="@drawable/days_border"
+            android:textColor="@color/white"
+            android:text="Miércoles"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="4dp"/>
+
+        <!-- Botón Jueves -->
+        <Button
+            android:id="@+id/btnThursday"
+            android:background="@drawable/days_border"
+            android:textColor="@color/white"
+            android:text="Jueves"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="4dp"/>
+
+        <!-- Botón Viernes -->
+        <Button
+            android:id="@+id/btnFriday"
+            android:background="@drawable/days_border"
+            android:textColor="@color/white"
+            android:text="Viernes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="4dp"/>
+
+        <!-- Botón Sábado -->
+        <Button
+            android:id="@+id/btnSaturday"
+            android:background="@drawable/days_border"
+            android:textColor="@color/white"
+            android:text="Sábado"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="4dp"/>
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1" />
+
+        <!-- Botón Domingo -->
+        <Button
+            android:background="@drawable/days_border"
+            android:textColor="@color/white"
+            android:id="@+id/btnSunday"
+            android:text="Domingo"
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="4dp"/>
+    </GridLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp">
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:text="Añadir"
+            android:textSize="18sp"
+            android:fontFamily="@font/open_sans_regular"
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:background="@drawable/client_border"
+            android:backgroundTint="@color/smoothgreen"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+</LinearLayout>

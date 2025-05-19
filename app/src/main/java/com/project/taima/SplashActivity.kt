@@ -13,7 +13,7 @@ class SplashActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setTheme(R.style.Theme_MyApp_Splash) // Asegúrate de que el nombre del estilo coincida
+        setTheme(R.style.Theme_MyApp_Splash)
         setContentView(R.layout.activity_splash)
 
         CoroutineScope(Dispatchers.Main).launch {

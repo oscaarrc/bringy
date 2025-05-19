@@ -6,7 +6,7 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@drawable/taisma_logo"
+        android:icon="@drawable/bringy_circle_logo"
         android:label="@string/app_name"
         android:roundIcon="@drawable/taisma_logo"
         android:supportsRtl="true"

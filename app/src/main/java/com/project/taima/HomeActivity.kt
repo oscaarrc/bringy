@@ -20,22 +20,20 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        // Inicializar FirebaseAuth
+        // Initialize FirebaseAuth
         auth = FirebaseAuth.getInstance()
 
-        // Sección de las distintas áreas de la aplicación
+        // Views
         val customerSection = findViewById<LinearLayout>(R.id.sectionCustomer)
         val toolsSection = findViewById<LinearLayout>(R.id.sectionTools)
         val routeSection = findViewById<LinearLayout>(R.id.sectionRoute)
         val summarySection = findViewById<LinearLayout>(R.id.sectionSummary)
-
-        // Agregar el clic en el logout
         val logoutText = findViewById<TextView>(R.id.logoutText)
         logoutText.setOnClickListener {
             logout()
         }
 
-        // Otras secciones de la aplicación
+        // ClickListeners
         customerSection.setOnClickListener {
             val intent = Intent(this@HomeActivity, CustomerActivity::class.java)
             startActivity(intent)
@@ -61,10 +59,8 @@ class HomeActivity : AppCompatActivity() {
      * Método para cerrar sesión
      */
     private fun logout() {
-        // Cerrar sesión en Firebase Authentication
         auth.signOut()
 
-        // Limpiar los datos de sesión de SharedPreferences
         val sharedPreferences = getSharedPreferences("AppPreferences", MODE_PRIVATE)
         sharedPreferences.edit().apply {
             remove("sessionToken")
@@ -72,7 +68,6 @@ class HomeActivity : AppCompatActivity() {
             apply()
         }
 
-        // Redirigir al usuario a la pantalla de inicio de sesión
         val intent = Intent(this@HomeActivity, LoginActivity::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         startActivity(intent)

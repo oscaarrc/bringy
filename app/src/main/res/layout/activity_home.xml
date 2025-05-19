@@ -19,13 +19,6 @@
         android:paddingStart="0dp"
         android:paddingEnd="0dp">
 
-        <ImageView
-            android:id="@+id/logoIcon"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/taisma_logo"
-            android:layout_gravity="center"
-            />
         <View
             android:layout_width="0dp"
             android:layout_height="match_parent"

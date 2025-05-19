@@ -10,13 +10,16 @@ quién ha pagado y quién mantiene saldos pendientes.
 >
 > • Planificar tu ruta diaria: visualiza de un vistazo todos los puntos de 
 entrega del día y organiza tu jornada de manera óptima.
+> 
 > • Consultar tu estado financiero: obtén informes automáticos de ingresos 
 y gastos con desglose diario, semanal, mensual y anual, y mantén siempre 
 el control de tu tesorería.
+>
 > • Importar y exportar datos: genera hojas de cálculo Excel con la 
 información de tus clientes y sus saldos, o integra en la app tus propios 
 listados para trabajar con datos unificados.
-Optimiza tu trabajo diario, centraliza la información de tus envíos y lleva al día 
+>
+>Optimiza tu trabajo diario, centraliza la información de tus envíos y lleva al día 
 tu contabilidad con Bringy.
 
 # Documentación:

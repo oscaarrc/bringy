@@ -1,3 +1,24 @@
+# Introducción
+
+>  ¡Bienvenido a Bringy, la aplicación Android que facilita la gestión de envíos
+ para autónomos y pequeños emprendedores!
+ Con Bringy podrás:
+ • Administrar clientes de forma sencilla: crea, edita o elimina fichas en 
+segundos y consulta el historial de operaciones para conocer al detalle 
+quién ha pagado y quién mantiene saldos pendientes.
+ • Planificar tu ruta diaria: visualiza de un vistazo todos los puntos de 
+entrega del día y organiza tu jornada de manera óptima.
+ • Consultar tu estado financiero: obtén informes automáticos de ingresos 
+y gastos con desglose diario, semanal, mensual y anual, y mantén siempre 
+el control de tu tesorería.
+ • Importar y exportar datos: genera hojas de cálculo Excel con la 
+información de tus clientes y sus saldos, o integra en la app tus propios 
+listados para trabajar con datos unificados.
+Optimiza tu trabajo diario, centraliza la información de tus envíos y lleva al día 
+tu contabilidad con Bringy.
+
+# Documentación:
+
 ## Activities
 
 En este proyecto de Android, cada pantalla principal se implementa como una **Activity** que actúa como controlador de su vista y coordina la lógica de navegación y sesión. A continuación se describen todas las Activities fundamentales de la app:
@@ -555,3 +576,13 @@ En el directorio **res/** se organizan los recursos de la app de la siguiente fo
 - **font/**: las tipografías (fuentes) empleadas en toda la interfaz.
 - **values/**: archivos XML con parámetros reutilizables (cadenas de texto, colores, estilos, dimensiones, arrays, etc.).
 - **layout/**: los diseños (XML) de todas las pantallas y componentes de la app.
+
+
+
+## Autoría
+
+Este proyecto fue desarrollado por [@oscaarrc](https://github.com/oscaarrc)
+
+## Licencia
+
+Proyecto elaborado con fines educativos como TFG de 2º CFGS de Desarrollo de Aplicaciones Multiplataforma en el IES Ana Luisa Benítez.

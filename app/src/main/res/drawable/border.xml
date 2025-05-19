@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- Estado seleccionado (activo) -->
+    <!-- Selected state (active) -->
     <item android:state_selected="true">
         <shape>
-            <solid android:color="@color/darkgreen" /> <!-- Color cuando está activo -->
+            <solid android:color="@color/darkgreen" />
             <corners android:radius="10dp" />
             <padding
                 android:left="1dp"
@@ -13,10 +13,10 @@
         </shape>
     </item>
 
-    <!-- Estado presionado -->
+    <!-- Pressed state -->
     <item android:state_pressed="true">
         <shape>
-            <solid android:color="@color/darkgreen" /> <!-- Color cuando está presionado -->
+            <solid android:color="@color/darkgreen" />
             <corners android:radius="10dp" />
             <padding
                 android:left="1dp"
@@ -26,10 +26,10 @@
         </shape>
     </item>
 
-    <!-- Estado normal -->
+    <!-- Normal state -->
     <item>
         <shape>
-            <solid android:color="@color/smoothgreen" /> <!-- Color normal -->
+            <solid android:color="@color/smoothgreen" />
             <corners android:radius="10dp" />
             <padding
                 android:left="1dp"

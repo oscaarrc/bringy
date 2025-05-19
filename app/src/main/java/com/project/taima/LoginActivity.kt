@@ -20,22 +20,20 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        // Inicializar Firebase Auth
+        // Initialize Firebase Auth
         auth = FirebaseAuth.getInstance()
 
         val etUsername = findViewById<EditText>(R.id.etUsername)
         val btnLogin = findViewById<Button>(R.id.btnLogin)
 
-        // Verificar si ya hay una sesión activa
+        // Check if there is already an active session
         checkActiveSession()
 
         btnLogin.setOnClickListener {
             val username = etUsername.text.toString()
 
-            // Comprobar si el DNI existe en la base de datos
             checkDniExists(username) { exists ->
                 if (exists) {
-                    // Iniciar sesión anónima
                     signInAnonymously(username) {
                         val intent = Intent(this, HomeActivity::class.java)
                         startActivity(intent)
@@ -73,9 +71,9 @@ class LoginActivity : AppCompatActivity() {
     private fun signInAnonymously(dni: String, onSuccess: () -> Unit) {
         auth.signInAnonymously()
             .addOnSuccessListener {
-                // Guardar la sesión como activa en Firestore con un token
+                // Saves the session as active on Firestore with a token
                 saveSessionToken(dni)
-                // Guardar la fecha de inicio de sesión en SharedPreferences
+                // Saves the login date in SharedPreferences
                 saveActiveSession()
                 onSuccess()
             }
@@ -84,11 +82,11 @@ class LoginActivity : AppCompatActivity() {
             }
     }
 
-    // Guardar el token de sesión en Firestore
+    // Saves the session token on Firestore
     private fun saveSessionToken(dni: String) {
         val db = FirebaseFirestore.getInstance()
 
-        val token = System.currentTimeMillis().toString() // Generamos un token único
+        val token = System.currentTimeMillis().toString() // Unique token
 
         db.collection("User")
             .whereEqualTo("dni", dni)
@@ -116,7 +114,7 @@ class LoginActivity : AppCompatActivity() {
         val sharedPreferences = getSharedPreferences("AppPreferences", MODE_PRIVATE)
         sharedPreferences.edit().apply {
             putString("sessionToken", token)
-            putLong("sessionDate", System.currentTimeMillis())  // Guardamos la fecha de inicio de sesión
+            putLong("sessionDate", System.currentTimeMillis())  // Saves the login date
             apply()
         }
     }

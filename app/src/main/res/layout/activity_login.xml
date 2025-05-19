@@ -9,11 +9,11 @@
     tools:context=".LoginActivity">
 
     <TextView
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="150dp"
         android:id="@+id/tvLoginTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="INICIAR SESIÓN"
+        android:text="Log In"
         android:fontFamily="sans-serif"
         android:textSize="34sp"
         android:textColor="@color/green"

@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- res/drawable/rounded_button.xml -->
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- Color de fondo del botón -->
-    <solid android:color="#4CAF50" /> <!-- Cambia el color a tu preferencia -->
+    <!-- Background color -->
+    <solid android:color="#4CAF50" />
 
-    <!-- Bordes redondeados -->
-    <corners android:radius="16dp" /> <!-- Ajusta el radio según prefieras -->
+    <!-- Rounded border -->
+    <corners android:radius="16dp" />
 
-    <!-- Opcional: Añadir un borde al botón -->
+    <!-- Border size and color -->
     <stroke
         android:width="2dp"
-        android:color="#388E3C" /> <!-- Cambia el color y grosor del borde -->
+        android:color="#388E3C" />
 </shape>

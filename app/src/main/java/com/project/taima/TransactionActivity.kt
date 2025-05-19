@@ -515,9 +515,7 @@ class TransactionActivity : AppCompatActivity() {
                         currentBalance + transaction.amount
 
                     }
-                    /*Log.w("TypeCheck","$currentBalance + ${transaction.amount} = ${currentBalance + transaction.amount}")
-                    Log.w("TypeCheck","$currentBalance - ${transaction.amount} = ${currentBalance - transaction.amount}")
-                    Log.w("TypeCheck", "$adjustedBalance")*/
+
                     callback(adjustedBalance)
                 } else {
                     Log.w("DeleteTransactionFromBalance", "Error: Customer with ID: ${transaction.customerId} not found")

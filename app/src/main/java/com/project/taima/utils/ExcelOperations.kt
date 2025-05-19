@@ -101,7 +101,7 @@ fun importExcelToFirestore(filePath: String, progressBar: ProgressBar, loadingTe
     val db = FirebaseFirestore.getInstance()
 
     try {
-        // Eliminar todos los documentos de la colección "Transacciones"
+        // Deletes all documents in the “Transactions” collection
         db.collection("Transactions").get()
             .addOnSuccessListener { transactionDocuments ->
                 val transactionBatch = db.batch()
@@ -111,7 +111,7 @@ fun importExcelToFirestore(filePath: String, progressBar: ProgressBar, loadingTe
                 transactionBatch.commit().addOnSuccessListener {
                     Log.d("ImportExcel", "Colección 'Transacciones' vaciada exitosamente.")
 
-                    // Eliminar todos los documentos de la colección "Customer"
+                    // Delete all the documents in the “Customer” collection
                     db.collection("Customer").get()
                         .addOnSuccessListener { customerDocuments ->
                             val customerBatch = db.batch()
@@ -121,9 +121,7 @@ fun importExcelToFirestore(filePath: String, progressBar: ProgressBar, loadingTe
                             customerBatch.commit().addOnSuccessListener {
                                 Log.d("ImportExcel", "Colección 'Customer' vaciada exitosamente.")
 
-                                // Llamar a la función que agrega los clientes desde el archivo Excel
                                 addCustomersFromExcel(filePath, db) { success, message ->
-                                    // Ocultar el ProgressBar y el texto cuando termine
                                     progressBar.visibility = View.GONE
                                     loadingText.visibility = View.GONE
                                     callback(success, message)
@@ -131,7 +129,7 @@ fun importExcelToFirestore(filePath: String, progressBar: ProgressBar, loadingTe
                             }
                         }
                         .addOnFailureListener { e ->
-                            progressBar.visibility = View.GONE // Ocultar el ProgressBar en caso de error
+                            progressBar.visibility = View.GONE
                             loadingText.visibility = View.GONE
                             Log.e("ImportExcel", "Error al obtener documentos de 'Customer': ${e.message}")
                             callback(false, "Error al eliminar los documentos de 'Customer'.")
@@ -174,10 +172,9 @@ fun addCustomersFromExcel(filePath: String, db: FirebaseFirestore, callback: (Bo
         val totalSheets = workbook.numberOfSheets
         var totalRows = 0
 
-        // Calcular el número total de filas a procesar
         for (sheetIndex in 0 until totalSheets) {
             val sheet = workbook.getSheetAt(sheetIndex)
-            totalRows += sheet.physicalNumberOfRows - 1 // Restar 1 para no contar la fila de encabezados
+            totalRows += sheet.physicalNumberOfRows - 1
         }
         val tasks = mutableListOf<Task<DocumentReference>>()
 
@@ -200,13 +197,13 @@ fun addCustomersFromExcel(filePath: String, db: FirebaseFirestore, callback: (Bo
                         alias = alias,
                         balance = balance,
                         routeDay = listOf(routeDay),
-                        position = emptyMap<String, Int>().toMutableMap() // Map vacío para "position"
+                        position = emptyMap<String, Int>().toMutableMap() // Empty map for "position"
                     )
                 }
             }
         }
 
-        // Guardar los clientes en Firestore
+        // Saves customers in Firestore
         customersMap.values.forEach { customer ->
             customer.routeDay = customer.routeDay.distinct()
 
@@ -221,7 +218,7 @@ fun addCustomersFromExcel(filePath: String, db: FirebaseFirestore, callback: (Bo
             tasks.add(task)
         }
 
-        // Esperar a que todas las tareas se completen
+        // Waits for all tasks to be completed.
         Tasks.whenAllComplete(tasks).addOnCompleteListener {
             fis.close()
             if (it.isSuccessful) {

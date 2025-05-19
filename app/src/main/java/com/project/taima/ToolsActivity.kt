@@ -37,7 +37,7 @@ class ToolsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tools)
 
-        // Inicialización de los elementos del layout
+        // Initialization of layout elements
         progressBar = findViewById(R.id.progressBar)
         loadingText = findViewById(R.id.loadingText)
         loadingLayout = findViewById(R.id.loadingLayout)

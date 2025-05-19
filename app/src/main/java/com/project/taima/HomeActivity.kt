@@ -55,9 +55,6 @@ class HomeActivity : AppCompatActivity() {
         }
     }
 
-    /**
-     * Método para cerrar sesión
-     */
     private fun logout() {
         auth.signOut()
 

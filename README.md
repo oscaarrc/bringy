@@ -3,15 +3,17 @@
 >  ¡Bienvenido a Bringy, la aplicación Android que facilita la gestión de envíos
  para autónomos y pequeños emprendedores!
  Con Bringy podrás:
- • Administrar clientes de forma sencilla: crea, edita o elimina fichas en 
+>
+>• Administrar clientes de forma sencilla: crea, edita o elimina fichas en 
 segundos y consulta el historial de operaciones para conocer al detalle 
 quién ha pagado y quién mantiene saldos pendientes.
- • Planificar tu ruta diaria: visualiza de un vistazo todos los puntos de 
+>
+> • Planificar tu ruta diaria: visualiza de un vistazo todos los puntos de 
 entrega del día y organiza tu jornada de manera óptima.
- • Consultar tu estado financiero: obtén informes automáticos de ingresos 
+> • Consultar tu estado financiero: obtén informes automáticos de ingresos 
 y gastos con desglose diario, semanal, mensual y anual, y mantén siempre 
 el control de tu tesorería.
- • Importar y exportar datos: genera hojas de cálculo Excel con la 
+> • Importar y exportar datos: genera hojas de cálculo Excel con la 
 información de tus clientes y sus saldos, o integra en la app tus propios 
 listados para trabajar con datos unificados.
 Optimiza tu trabajo diario, centraliza la información de tus envíos y lleva al día 
